@@ -21,11 +21,11 @@
 
 ## What's this?
 
-`NAIManager` is a Network Activity Indicator Manager for iOS.
+`NetworkActivityIndicatorManager`(aka `NAIManager`) is a Network Activity Indicator Manager for iOS.
 
 ## Requirements
 
-* iOS 7.0+
+* iOS 8.0+
 
 ## Installation
 
@@ -52,7 +52,7 @@ let params = ["type": 1]
 NAIManager.operationStarted()
 
 NetworkingFramework.request(url, params: params) { result in
-  
+
     NAIManager.operationFinished()
     // code ...
 }

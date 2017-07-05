@@ -11,7 +11,7 @@ Pod::Spec.new do |s|
                         NAIManager is a Network Activity Indicator Manager for iOS written in Swift.
                         DESC
 
-  s.ios.deployment_target = '7.0'
+  s.ios.deployment_target = '8.0'
 
   s.source           = { :git => "https://github.com/Meniny/NetworkActivityIndicatorManager.git", :tag => s.version.to_s }
   s.source_files = 'NAIManager/Source/*'
