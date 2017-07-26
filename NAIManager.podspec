@@ -1,7 +1,7 @@
 
 Pod::Spec.new do |s|
   s.name             = "NAIManager"
-  s.version          = "1.0.0"
+  s.version          = "1.1.0"
   s.summary          = "A Network Activity Indicator Manager for iOS."
   s.author           = { "Meniny" => "Meniny@qq.com" }
   s.homepage         = "https://github.com/Meniny/NetworkActivityIndicatorManager"

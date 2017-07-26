@@ -1,7 +1,7 @@
 
 <p align="center">
   <a href="https://cocoapods.org/pods/NAIManager">
-  <img alt="Version" src="https://img.shields.io/badge/version-1.0.0-brightgreen.svg">
+  <img alt="Version" src="https://img.shields.io/badge/version-1.1.0-brightgreen.svg">
   <img alt="Author" src="https://img.shields.io/badge/author-Meniny-blue.svg">
   <img alt="Build Passing" src="https://img.shields.io/badge/build-passing-brightgreen.svg">
   <img alt="Swift" src="https://img.shields.io/badge/swift-3.0%2B-orange.svg">
@@ -21,7 +21,7 @@
 
 ## What's this?
 
-`NetworkActivityIndicatorManager`(aka `NAIManager`) is a Network Activity Indicator Manager for iOS.
+`Network Activity Indicator Manager`(aka `NAIManager`) is a Network Activity Indicator Manager for iOS.
 
 ## Requirements
 
