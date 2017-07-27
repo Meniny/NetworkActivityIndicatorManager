@@ -14,8 +14,8 @@ Pod::Spec.new do |s|
   s.ios.deployment_target = '8.0'
 
   s.source           = { :git => "https://github.com/Meniny/NetworkActivityIndicatorManager.git", :tag => s.version.to_s }
-  s.source_files = 'NAIManager/Source/*'
-  s.public_header_files = 'NAIManager/Source/*.h'
+  s.source_files = 'NAIManager/**/*'
+  s.public_header_files = 'NAIManager/**/*.h'
 
   s.ios.frameworks = 'Foundation', 'UIKit'
 
