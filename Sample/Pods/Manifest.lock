@@ -1,0 +1,16 @@
+PODS:
+  - NAIManager (1.1.0)
+
+DEPENDENCIES:
+  - NAIManager (from `../`)
+
+EXTERNAL SOURCES:
+  NAIManager:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  NAIManager: e43069f6df7c248ed12c2bc65cc0676da338800b
+
+PODFILE CHECKSUM: 1d18dc28e793fde849ef58002acc14704e8dbb3a
+
+COCOAPODS: 1.2.1

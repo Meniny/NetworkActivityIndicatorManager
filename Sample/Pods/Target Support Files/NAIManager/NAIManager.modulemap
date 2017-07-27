@@ -1,0 +1,6 @@
+framework module NAIManager {
+  umbrella header "NAIManager-umbrella.h"
+
+  export *
+  module * { export * }
+}

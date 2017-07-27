@@ -4,31 +4,31 @@ import UIKit
 
 open class NetworkActivityIndicatorManager: NSObject {
 
-    private static var loadingCount: Int = 0
+    private(set) static var loadingCount: UInt = 0
 
     open class func operationStarted() {
 
         #if os(iOS)
-        objc_sync_enter(loadingCount)
-        if loadingCount == 0 {
-            UIApplication.shared.isNetworkActivityIndicatorVisible = true
+        objc_sync_enter(NetworkActivityIndicatorManager.loadingCount)
+        DispatchQueue.main.async {
+            UIApplication.shared.isNetworkActivityIndicatorVisible = (NetworkActivityIndicatorManager.loadingCount == 0)
         }
-        loadingCount += 1
-        objc_sync_exit(loadingCount)
+        NetworkActivityIndicatorManager.loadingCount += 1
+        objc_sync_exit(NetworkActivityIndicatorManager.loadingCount)
         #endif
     }
 
     open class func operationFinished() {
         objc_sync_enter(loadingCount)
+        if NetworkActivityIndicatorManager.loadingCount > 0 {
+            NetworkActivityIndicatorManager.loadingCount -= 1
+        }
         #if os(iOS)
-        if loadingCount > 0 {
-            loadingCount -= 1
+        DispatchQueue.main.async {
+            UIApplication.shared.isNetworkActivityIndicatorVisible = (NetworkActivityIndicatorManager.loadingCount == 0)
         }
-        if loadingCount == 0 {
-            UIApplication.shared.isNetworkActivityIndicatorVisible = false
-        }
-        objc_sync_exit(loadingCount)
         #endif
+        objc_sync_exit(NetworkActivityIndicatorManager.loadingCount)
     }
 }
 
